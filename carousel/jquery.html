@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reprehenderit laboriosam fugiat ducimus minus libero. Odio quaerat at fuga ipsa iure a inventore autem dignissimos labore cumque, porro quisquam soluta.</div>
+	<button >Fade and Slide</button>
+	<script>
+		$(function() {
+			$.fn.slideandToggle = function() {
+				console.log('clicked');
+			};
+			$('button').on('click',function() {
+				$('div').slideandToggle();
+			});
+		});
+	</script>
+</body>
+</html>

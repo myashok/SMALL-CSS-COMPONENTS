@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Collapsible FAQ</title>
+    <script src="jquery.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        font-family: "Arial", "sans-serif";
+        width: 50%;
+        margin: auto;
+      }
+      .hide {
+        display: none;
+      }
+      dl {
+        width: 60%;
+        margin: 40px auto;
+      }
+      dt {
+        font-weight: bold;
+        font-size: 1.1em;
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 5px;
+        text-align: center;
+        margin: auto;
+        border-bottom: 2px solid rgb(150, 148, 149);
+        border-top: 2px solid rgb(120, 128, 129);
+        border-radius: 3px;
+      }
+      dd {
+        padding: 5px;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(128, 128, 128, 0.2);
+        border-radius: 3px;
+      }
+
+      dt:first-child {
+        border-top: none;
+      }
+      dt:nth-last-child(2) {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>When we are open Do you want to know ?</dt>
+      <dd>We are open 24 hours.</dd>
+      <dt>When we are open Do you want to know ?</dt>
+      <dd>We are open 24 hours.</dd>
+      <dt>When we are open Do you want to know ?</dt>
+      <dd>We are open 24 hours.</dd>
+      <dt>When we are open Do you want to know ?</dt>
+      <dd>We are open 24 hours.</dd>
+      <dt>When we are open Do you want to know ?</dt>
+      <dd>We are open 24 hours.</dd>
+    </dl>
+  </body>
+  <script>
+    $(function () {
+      $("dd").addClass("hide").first().removeClass("hide");
+      $("dl").on("mouseenter", "dt", function () {
+        $(this).next().slideDown(200).siblings("dd").slideUp(200);
+      });
+    });
+  </script>
+</html>

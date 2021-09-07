@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.3s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 50px;
+}
+.share {
+  display: inline-block;
+}
+.submit,
+.share {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.submit:hover,
+.share:hover {
+  box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.4px;
+}
+.submit:active,
+.submit:active {
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+input {
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+.toggle {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 16px 32px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.toggle:hover {
+  box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.4px;
+}
+
+.toggle:active {
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-container {
+  background-color: var(--primary-color);
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  margin-bottom: 80px;
+}
+.center-point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.brand {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: bold;
+  color: var(--secondary-color);
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+}
+.lovers-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.heart {
+  position: absolute;
+  stroke: var(--secondary-color);
+  fill: red;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  transform: translate(-50%, -50%);
+}
+
+.last {
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.needle {
+  position: absolute;
+  background-color: var(--secondary-color);
+  left: 50%;
+  transform: translate(-50%, 10%) rotate(180deg);
+  transform-origin: 50% 90%;
+  transition: all 0.1s ease-in;
+}
+.hour {
+  top: 20%;
+  height: 30%;
+  width: 5px;
+  background-color: #1c7ed6;
+}
+
+.minute {
+  top: 15%;
+  height: 35%;
+  width: 3.5px;
+}
+
+.second {
+  top: 10%;
+  height: 40%;
+  width: 3px;
+  background-color: #e74c3c;
+}
+
+.time {
+  background-color: var(--secondary-color);
+  width: 4px;
+  height: 6%;
+}
+.twelve {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  transform: translate(-50%, 0);
+}
+
+.three {
+  position: absolute;
+  left: 96%;
+  top: 50%;
+  transform: translate(0, -50%) rotate(90deg);
+}
+
+.six {
+  position: absolute;
+  left: 50%;
+  top: 94%;
+  transform: translate(-50%, 0);
+}
+
+.nine {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translate(0, -50%) rotate(-90deg);
+}
+
+.date {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+.day {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 4px;
+  border-radius: 50%;
+}

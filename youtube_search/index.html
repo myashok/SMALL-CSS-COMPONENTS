@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Youtube Search</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/myscript.js"></script>
+    <!-- Add fancyBox -->
+    <link
+      rel="stylesheet"
+      href="fancybox/source/jquery.fancybox.css?v=2.1.6"
+      type="text/css"
+      media="screen"
+    />
+    <script
+      type="text/javascript"
+      src="fancybox/source/jquery.fancybox.pack.js?v=2.1.6"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7"
+      type="text/css"
+      media="screen"
+    />
+    <script
+      type="text/javascript"
+      src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Search <span>Vidz</span></h1>
+        <p>Search all <span>YouTube</span> Videos</p>
+      </header>
+      <section>
+        <form name="search-form" onsubmit="return search()" id="search-form">
+          <div class="fieldcontainer">
+            <input
+              type="search"
+              id="query"
+              class="search-field"
+              placeholder="Search YouTube..."
+            />
+            <input type="submit" name="search-btn" id="search-btn" value="" />
+          </div>
+        </form>
+        <div id="results"></div>
+        <div id="buttons"></div>
+      </section>
+      <footer>
+        <p>Copyright &copy; 2017. All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>
